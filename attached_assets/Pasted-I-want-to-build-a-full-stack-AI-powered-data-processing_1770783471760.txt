@@ -1,0 +1,79 @@
+I want to build a full-stack AI-powered data processing application.
+
+GOAL:
+Create a web application that can accept ANY type of data (any size, any format) including:
+- Images (jpg, png, jpeg)
+- Text files (txt, docx, pdf)
+- Videos (mp4, mov)
+- CSV files
+- Excel files
+- JSON
+- Structured and unstructured data
+- Categorical and numerical datasets
+
+The system must:
+1. Automatically detect file type.
+2. Extract data from the file.
+3. Clean the data intelligently like a human ML engineer would.
+4. Handle missing values, duplicates, corrupted data.
+5. Normalize formats.
+6. Convert unstructured data into structured format.
+7. Prepare data ready for ML model training.
+8. Allow exporting cleaned data as CSV, JSON, or parquet.
+9. Support large file uploads (use chunking if needed).
+
+TECH STACK:
+- Backend: Python (FastAPI)
+- Frontend: React (simple clean UI)
+- Database: PostgreSQL
+- File Storage: Local for now (design scalable for cloud)
+- AI processing: Use Python libraries:
+  - pandas
+  - numpy
+  - scikit-learn
+  - opencv (for images)
+  - pytesseract (for OCR)
+  - moviepy (for video processing)
+  - nltk/spacy (for text cleaning)
+
+FEATURES:
+- Drag and drop upload UI
+- File preview
+- Data summary dashboard (show missing values, data types, statistics)
+- Auto-clean button
+- Manual override options
+- Logs showing what transformations were applied
+- REST API endpoints for:
+   - Upload
+   - Process
+   - Clean
+   - Export
+
+ARCHITECTURE:
+- Modular design
+- Separate services:
+   - File handler
+   - Data analyzer
+   - Cleaning engine
+   - Export engine
+- Add proper error handling
+- Add logging
+- Use async processing for large files
+
+SECURITY:
+- Validate file types
+- Limit file size
+- Prevent code injection
+- Add basic authentication
+
+DELIVERABLE:
+1. Create project structure.
+2. Generate backend code first.
+3. Then generate frontend code.
+4. Include instructions to run locally.
+5. Include requirements.txt and package.json.
+
+IMPORTANT:
+Write production-level clean code with comments.
+Use best practices.
+Design the system scalable for future cloud deployment.
