@@ -60,13 +60,12 @@ def process_file(file_path, output_dir):
         
         # Save processed file
         processed_filename = f"processed_{filename}"
-        processed_path = os.path.join(output_dir, processed_filename)
+        # Force .csv extension for processed output for consistency in download
+        processed_filename_csv = os.path.splitext(processed_filename)[0] + ".csv"
+        processed_path = os.path.join(output_dir, processed_filename_csv)
         
-        # Save as CSV for simplicity for now
-        if ext in ['.json']:
-             df_cleaned.to_json(processed_path, orient='records')
-        else:
-             df_cleaned.to_csv(processed_path, index=False)
+        # Save as CSV for simple universal download
+        df_cleaned.to_csv(processed_path, index=False)
 
         result = {
             "rowCount": row_count,
