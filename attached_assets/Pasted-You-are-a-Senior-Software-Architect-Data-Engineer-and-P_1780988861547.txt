@@ -1,0 +1,157 @@
+You are a Senior Software Architect, Data Engineer, and Production Support Engineer.
+
+My application is a Data Cleaning and Preprocessing Platform that supports CSV, Excel, JSON, Images, and .data files.
+
+Current Issue:
+A large dataset (Online Retail.xlsx, 22.6 MB, 541,909 rows, 8 columns) uploads successfully but shows an "Error" status during processing. Similar failures may occur with other large files in the future.
+
+Objective:
+Perform a complete production-grade audit of the application and eliminate hidden failure points.
+
+Requirements:
+
+PHASE 1 – ROOT CAUSE ANALYSIS
+
+1. Analyze the entire codebase.
+2. Trace the complete workflow:
+
+   * File Upload
+   * File Validation
+   * File Storage
+   * File Parsing
+   * DataFrame Creation
+   * Data Profiling
+   * Missing Value Analysis
+   * Duplicate Detection
+   * Outlier Detection
+   * Visualization Generation
+   * Export Processing
+   * Database Operations
+3. Identify the exact file, function, and line number where processing fails.
+4. Capture the full stack trace.
+5. Display detailed error messages instead of generic "Error" statuses.
+
+PHASE 2 – ENTERPRISE LOGGING
+
+Implement structured logging throughout the application:
+
+* Upload Started
+* Upload Completed
+* Parsing Started
+* Parsing Completed
+* Profiling Started
+* Profiling Completed
+* Visualization Started
+* Visualization Completed
+* Export Started
+* Export Completed
+* Database Write Started
+* Database Write Completed
+* Exception Details
+
+Each log should include:
+
+* Timestamp
+* File Name
+* File Size
+* Row Count
+* Column Count
+* Execution Time
+* Memory Usage
+* Error Details
+
+PHASE 3 – LARGE DATASET SUPPORT
+
+Optimize the system for datasets up to:
+
+* 2,000,000+ rows
+* 500+ columns
+* 100MB+ file size
+
+Implement:
+
+1. Chunk Processing
+2. Lazy Loading
+3. Memory-Efficient Reading
+4. Data Sampling for Visualizations
+5. Pagination for Data Preview
+6. Background Processing Jobs
+7. Progress Tracking
+8. Incremental Analysis
+9. Avoid Duplicate DataFrame Copies
+10. Efficient Garbage Collection
+
+PHASE 4 – RESILIENCE & ERROR HANDLING
+
+Add protection against:
+
+* Empty Files
+* Corrupted Files
+* Unsupported Formats
+* Invalid Encodings
+* Memory Exhaustion
+* Timeouts
+* Database Failures
+* Parsing Failures
+* Visualization Failures
+* Network Interruptions
+
+System should never crash.
+
+Instead:
+
+* Capture exception
+* Log exception
+* Notify user
+* Continue operation where possible
+
+PHASE 5 – USER EXPERIENCE IMPROVEMENTS
+
+Replace generic statuses with:
+
+* Uploading
+* Validating
+* Processing
+* Analyzing
+* Generating Insights
+* Completed
+* Failed (with exact reason)
+
+Provide:
+
+* Progress Bar
+* Estimated Processing Time
+* Detailed Error Panel
+* Retry Button
+
+PHASE 6 – PERFORMANCE REPORT
+
+Generate a report showing:
+
+1. Bottlenecks found
+2. Root cause of current failure
+3. Memory usage by module
+4. Execution time by module
+5. Files modified
+6. Functions modified
+7. Recommended improvements
+
+PHASE 7 – FUTURE-PROOFING
+
+Review the entire application for scalability, maintainability, and production readiness.
+
+Identify:
+
+* Potential future failure points
+* Performance bottlenecks
+* Security issues
+* Memory leaks
+* Code smells
+* Redundant operations
+
+Refactor where necessary.
+
+IMPORTANT:
+Do not make assumptions.
+Do not provide theoretical suggestions.
+Analyze the actual codebase, execute tests, inspect logs, reproduce the failure, identify the exact root cause, implement fixes, and provide a detailed technical report of all changes made.
