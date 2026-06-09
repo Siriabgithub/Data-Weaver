@@ -1,0 +1,57 @@
+The application currently supports multiple file formats and all data cleaning functionalities are working correctly. However, it is unable to properly read and process DATA files with the ".data" extension.
+
+Task:
+Add complete support for ".data" files without modifying or breaking any existing functionality.
+
+Requirements:
+
+1. Update the file upload system to recognize and accept ".data" files.
+
+2. Implement a robust DATA file reader that:
+
+   * Automatically detects delimiters (comma, semicolon, tab, pipe, space).
+   * Falls back to manual delimiter selection if auto-detection fails.
+   * Supports files with and without headers.
+   * Handles varying numbers of columns.
+   * Converts the uploaded DATA file into a valid Pandas DataFrame.
+
+3. Ensure the parsed DataFrame is fully compatible with all existing modules:
+
+   * Data Preview
+   * Data Profiling
+   * Missing Value Analysis
+   * Duplicate Detection
+   * Outlier Detection
+   * Data Cleaning Operations
+   * Data Visualization
+   * Feature Engineering
+   * Export Functionality
+
+4. Add validation and error handling for:
+
+   * Empty DATA files
+   * Corrupted DATA files
+   * Inconsistent row lengths
+   * Unsupported encodings
+   * Parsing failures
+
+5. If the DATA file has no column names, automatically generate columns:
+
+   * Column_1
+   * Column_2
+   * Column_3
+   * etc.
+
+6. Verify compatibility using common machine learning datasets such as:
+
+   * Iris.data
+   * Wine.data
+   * Adult.data
+   * Breast Cancer Wisconsin.data
+
+7. Analyze the existing codebase first and identify where file parsing is currently implemented. Extend the current parser instead of creating a separate workflow.
+
+8. Generate production-ready code changes only where necessary and provide a summary of modified files and functions.
+
+Expected Result:
+Users should be able to upload any valid ".data" file, view the dataset immediately, perform all cleaning operations, and export the cleaned data exactly as they can with CSV and Excel files.

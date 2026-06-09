@@ -25,8 +25,11 @@ export function UploadZone() {
       'text/csv': ['.csv'],
       'application/json': ['.json'],
       'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'],
+      'application/vnd.ms-excel': ['.xls'],
       'image/jpeg': ['.jpg', '.jpeg'],
       'image/png': ['.png'],
+      'application/octet-stream': ['.data'],
+      'text/plain': ['.txt', '.data'],
     }
   });
 
@@ -61,7 +64,7 @@ export function UploadZone() {
             {isDragActive ? "Drop your file here" : "Upload your dataset"}
           </h3>
           <p className="text-sm text-muted-foreground max-w-xs mx-auto">
-            Drag and drop or click to browse. We support CSV, Excel, JSON, and Images.
+            Drag and drop or click to browse. We support CSV, Excel, JSON, .data, and Images.
           </p>
         </div>
 
@@ -69,6 +72,7 @@ export function UploadZone() {
           <Badge variant="outline">CSV</Badge>
           <Badge variant="outline">Excel</Badge>
           <Badge variant="outline">JSON</Badge>
+          <Badge variant="outline">.data</Badge>
           <Badge variant="outline">Images</Badge>
         </div>
       </div>
